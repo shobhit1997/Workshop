@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">Workshop</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_dashboard">Dashboard</string>
+    <string name="title_textview">Title</string>
+    <string name="date_textview">Date</string>
+    <string name="description_textview">Description</string>
+    <string name="username_text_view">Username</string>
+    <string name="password_text_view">Password</string>
+    <string name="phone_text_view">Phone No.</string>
+    <string name="login_button">Login</string>
+    <string name="signup_button">Sign Up</string>
+    <string name="signOut_button">Sign Out</string>
+    <string name="skip_button">Skip</string>
+    <string name="apply_button">Apply</string>
+    <string name="cancel_button">Cancel</string>
+</resources>
