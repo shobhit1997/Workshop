@@ -1,6 +1,8 @@
 package com.shobhit.workshop;
 
+import android.content.SharedPreferences;
 import android.os.CountDownTimer;
+import android.preference.PreferenceManager;
 import android.support.design.button.MaterialButton;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
@@ -22,7 +24,14 @@ public class MainActivity extends AppCompatActivity{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-//        insertWorkshops();
+        SharedPreferences sharedPreferences= PreferenceManager.getDefaultSharedPreferences(this);
+        if(!sharedPreferences.getBoolean("firstTime",false))
+        {
+            insertWorkshops();
+            SharedPreferences.Editor editor=sharedPreferences.edit();
+            editor.putBoolean("firstTime",true);
+            editor.commit();
+        }
         FragmentManager fragmentManager = getSupportFragmentManager();
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
         fragmentTransaction.add(R.id.frame,new Splash());
